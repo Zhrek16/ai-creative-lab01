@@ -179,13 +179,15 @@ torch.Generator(device="cpu")
 ## 8. Финальная структура
 
 ```text
-ai-creative-lab01_variant7/
+ai-creative-lab01/
+├── .gitignore
 ├── README.md
 ├── requirements.txt
 ├── configs/
 │   └── run_config.json
 ├── src/
 │   ├── generate_once.py
+│   ├── generate_error.py
 │   └── verify_artifacts.py
 ├── scripts/
 │   ├── setup_windows.ps1
@@ -194,11 +196,22 @@ ai-creative-lab01_variant7/
 │   └── run_error.ps1
 ├── artifacts/
 │   ├── run_001/
-│   └── run_002/
-├── reports/
-│   ├── report_template.md
-│   ├── limitations_card.md
-│   ├── reproducibility_protocol.md
-│   └── environment.txt
-└── data/
+│   │   ├── manifest.json
+│   │   └── result.png
+│   ├── run_002/
+│   │   ├── manifest.json
+│   │   └── result.png
+│   └── error_run/
+│       ├── manifest.json
+│       └── result.png
+└── reports/
+    ├── environment.txt
+    ├── error.log
+    ├── limitations_card.md
+    ├── report.md
+    ├── reproducibility_protocol.md
+    ├── sha256_comparison.json
+    └── source_notes.md
+
+data/ и дублирующиеся файлы manifest.json в reports/run_001/ и reports/run_002/ в итоговую структуру не входят.
 ```
